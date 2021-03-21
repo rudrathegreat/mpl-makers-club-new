@@ -1,0 +1,166 @@
+.slider{
+	overflow: hidden;
+	height: 100vh;
+	margin:0;
+    background:black;
+}
+
+.slider figure .slide{
+	width: 20%;
+	float: left;
+	height: 100vh;
+    background-position:center;
+    background-repeat:no-repeat;
+	background-size:cover;
+    position:relative;
+    color:white;
+    background:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slider figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 30s slidy infinite;
+}
+
+ .slide .black {
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.5);
+    width:100%;
+    height: 100%;
+}
+
+.slide .container {
+    position: relative;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide h1 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size:3em;
+    margin-bottom:1vh;
+}
+
+.slide p {
+    font-family: 'Raleway', sans-serif;
+    font-size:1.25em;
+    font-weight:300;
+}
+
+
+.container .button {
+    display:flex;
+    margin-top:3vh;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+
+} 
+
+.slide a {
+    display: inline-block;
+    text-decoration:none;
+    color:white;
+    margin:0 0.5vw;
+    font-family:'Raleway', sans-serif;
+    font-weight:400;
+    text-transform: uppercase;
+    transform: translateX(0);
+    transition:transform 0.2s ease-in-out;
+}
+
+.slide svg {
+    width:5vw;
+    max-height: 3vh;
+}
+
+@keyframes slidy{
+    0% {
+        opacity:1;
+        left:0%;
+    }
+    16% {
+        opacity:1;
+        left:0%;
+    }
+    18% {
+        opacity:0;
+        left:0%;
+    }
+    20% {
+        opacity:0;
+        left:-100%;
+    }
+    22% {
+        opacity:1;
+    }
+    36% {
+        opacity:1;
+        left:-100%;
+    }
+    38% {
+        opacity:0;
+        left:-100%;
+    }
+    40% {
+        opacity:0;
+        left:-200%;
+    }
+    42% {
+        opacity:1;
+    }
+    56% {
+        opacity:1;
+        left:-200%;
+    }
+    58% {
+        opacity:0;
+        left:-200%;
+    }
+    60% {
+        opacity:0;
+        left:-300%;
+    }
+    62% {
+        opacity:1;
+    }
+    76% {
+        opacity:1;
+        left:-300%;
+    }
+    78% {
+        opacity:0;
+        left:-300%;
+    }
+    80% {
+        opacity:0;
+        left:-400%;
+    }
+    82% {
+        opacity:1;
+    }
+    96% {
+        opacity:1;
+        left:-400%;
+    }
+    98% {
+        opacity:0;
+        left:-400%;
+    }
+    100% {
+        opacity:0;
+        left:0%;
+    }
+}
