@@ -27,6 +27,7 @@ nav h1 {
 	text-transform: uppercase;
 	font-family: 'Raleway', sans-serif;
 	font-weight:300;
+	font-size:1.5vw;
 }
 
 .hamburger {
@@ -100,7 +101,7 @@ nav h1 {
 	transition:opacity 0.5s ease-in-out, transform 0.5s ease-out;
 }
 
-.menu svg {
+.menu .network {
 	opacity:0;
 	transition:opacity 0.5s ease-in-out;
 }
@@ -139,13 +140,13 @@ nav h1 {
 	height:5vh;
 }
 
-.menu svg {
+.menu .network {
 	position:absolute;
 	width:100%;
+	height:auto;
 	bottom:0;
 	left:0;
 	color:#eee;
-	display:block;
 }
 
 .column a:hover:before {
@@ -187,7 +188,7 @@ input:checked ~ .menu .column{
 	transition-delay: 0.4s;
 }
 
-input:checked ~ .menu svg{
+input:checked ~ .menu .network{
 	opacity: 1;
 	transition: opacity 0.5s ease-in-out;
 	transition-delay: 0.4s;

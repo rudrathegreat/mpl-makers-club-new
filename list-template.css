@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	--dark-color:#333;
+	--light-color:#eee;
+	--black:black;
+	--white:white;
+}
+
+.hero {
+	background-color: var(--dark-color);
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.hero .network {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.hero .title {
+	font-size: 4vw;
+	font-family: 'Playfair Display', sans-serif;
+	color: var(--light-color);
+	font-style: italic;
+	font-weight: 300;
+}
+
+.hero .arrow {
+	transform: rotate(90deg);
+	margin-top:3vh;
+	transition: transform 0.3s ease-in-out;
+}
+
+.hero .arrow:hover {
+	transform: translateY(30px) rotate(90deg);
+	transition: transform 0.3s ease-in-out;
+}
+
+.content {
+	padding:10vh 10vw;
+	background-color: #eee;
+	width:80%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-column-gap: 1vw;
+	grid-row-gap: 1vh;
+}
+
+.content .cell {
+	background:url("img.jpg");
+	color: var(--light-color);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.content .overlay {
+	padding:5vh 3vw;
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	opacity:0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.content h1 {
+	font-size:3vw;
+	font-family: "Playfair Display", sans-serif;
+	font-weight: 300;
+	padding-bottom:2vh;
+}
+
+.content h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5vw;
+	font-weight: 300;
+	padding-bottom: 2vh;
+}
+
+.content .button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.content a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--white);
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+	margin:0 0.5vw;
+	transition: transform 0.3s ease-in-out;
+	font-size:1vw;
+}
+
+.content .arrow img {
+	width:100%;
+}
+
+.content .arrow:hover {
+	transform: translateX(20px);
+	transition: transform 0.3s ease-in-out;
+}
+
+.content .cell:hover > .overlay {
+	opacity:1;
+	transition: opacity 0.2s ease-in-out;
+}
